@@ -8,7 +8,7 @@ import { PointsService } from "../points/points.service";
 
 @Module({
   controllers: [AnswersController],
-  providers: [AnswersService],
+  providers: [AnswersService, PointsService],
   imports: [
     SequelizeModule.forFeature([Point, Answer])
   ],

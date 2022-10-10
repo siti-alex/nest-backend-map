@@ -19,4 +19,9 @@ export class PointsService {
         const points = await this.pointRepository.findAll();
         return points;
     }
+
+    async getById(id: number){
+        const point = await this.pointRepository.findByPk(id);
+        return point;
+    }
 }

@@ -13,6 +13,7 @@ lerna-debug.log*
 
 #Properties
 .env
+properties.env
 
 # OS
 .DS_Store

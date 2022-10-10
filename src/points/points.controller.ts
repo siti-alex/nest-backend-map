@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post } from "@nestjs/common";
+import { Body, Controller, Get, Param, Post } from "@nestjs/common";
 import { PointsService } from "./points.service";
 import { CreatePointDto } from "./dto/create-point.dto";
 
@@ -16,5 +16,10 @@ export class PointsController {
   @Post()
   create(@Body() pointDto: CreatePointDto){
     return this.pointService.createPoint(pointDto);
+  }
+
+  @Get(':id')
+  getPointById(@Param('id') id: number){
+    return this.pointService.getById(id);
   }
 }
